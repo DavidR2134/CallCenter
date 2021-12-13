@@ -37,7 +37,7 @@ for i in range(seconds):
     x += 1
     print('-'*40)
     print(x,". ")
-    time.sleep(1)
+    time.sleep(3)
     random_num = random.randint(1,3)
 
     if random_num == 1:
@@ -67,5 +67,22 @@ for i in range(seconds):
         print("Nothing happened during this second.")
         print("\tCalls waiting: ", calls_waiting.get_length())
         print()
+
+
+if call_number != 0:
+    print("Emptying queue:")
+    while call_number != 0:
+    
+        x += 1
+        print('-'*40)
+        print(x,". ")
+        time.sleep(3)
+        print("Call being routed to a service representative: ")
+        if calls_waiting.get_length() > 0:
+            call = calls_waiting.dequeue()
+            call_number -= 1
+            print("\n", call, "\n")
+            print()
+
 
 print("\nThe simulation has completed.")
