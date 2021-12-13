@@ -72,7 +72,6 @@ for i in range(seconds):
 if call_number != 0:
     print("Emptying queue:")
     while call_number != 0:
-    
         x += 1
         print('-'*40)
         print(x,". ")
